@@ -1,16 +1,55 @@
-# React + Vite
+# MedVision Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MedVision is a React-based healthcare platform frontend for patient screening, dashboards, appointments, messaging, laboratory results, authentication, and account settings.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- Vite
+- Tailwind CSS
+- React Router
+- Vitest and Testing Library
 
-## React Compiler
+## Requirements
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Node.js 18+
+- npm
 
-## Expanding the ESLint configuration
+## Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+copy .env.example .env
+npm run dev
+```
+
+Open `http://localhost:5173` in your browser.
+
+## Commands
+
+```bash
+npm run dev       # Start development server
+npm run build     # Create production build
+npm run preview   # Preview production build
+npm run test      # Run test suite
+```
+
+## Environment
+
+Copy `.env.example` to `.env` and set values for API, authentication, realtime messaging, and AI service integrations used by your environment. Never commit `.env` or production secrets.
+
+## Project Structure
+
+```text
+src/
+  components/    Reusable UI, layout, and auth components
+  config/        Runtime configuration
+  context/       Authentication, language, and realtime state
+  pages/         Application screens
+  services/      API and AI service clients
+  tests/         Unit and component tests
+```
+
+## License
+
+Project license and usage terms are defined by the project owner.
